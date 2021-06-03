@@ -5,8 +5,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-
-
 public class InputOutput {
 
 	public static void main(String[] args) {
@@ -14,17 +12,17 @@ public class InputOutput {
 		try {
 			FileReader fr = new FileReader("명단.txt");
 			char c;
-			String id = new String("");
-			while( (c=(char)fr.read()) != ',' ) {
-				id = id + c;
+			String id = new String("");             //String에 붙여 넣는다.
+			while( (c=(char)fr.read()) != ',' ) {   //','을 만날 때까지 계속 읽고, 읽은 것을 c에 넣는다, char 형변환
+				id = id + c;                    //c를 Id에 넣는다.
 			}
-			System.out.println( id );
+			System.out.println( id );               //Id를 출력한다.
 			
-			String name = new String("");
-			while( (c=(char)fr.read()) != '\n' ) {
-				name = name + c;
+			String name = new String("");           //String에 붙여 넣는다.
+			while( (c=(char)fr.read()) != '\n' ) {  //줄이 바뀔 때까지 계속 읽고, 읽은 것을 name에 넣는다, char 형변환
+				name = name + c;                //c를 name에 넣는다.
 			}
-			System.out.println( name );
+			System.out.println( name );             //name를 출력한다.
 			
 			fr.close();
 			
